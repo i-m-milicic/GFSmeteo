@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="imm-html">
+<head>
+  <title>UNS-GFS_meteo_IMM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>GFS meteorološka stanica</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="vazduh.html">Vazduh</a></li>
+        <li><a href="voda.html">Voda</a></li>
+        <li><a href="zemlja.html">Zemlja</a></li>
+      </ul><br>    
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div> 
+<iframe width="100%" height="290" src="podaci\10_casovnik_IMM.html" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+
+    <div class="col-sm-9">
+
+    <h2>Vazduh</h2>
+    <hr>     
+    <h5><span class="label label-danger">T [°C]</span> <span class="label label-primary">RH [%]</span> <span class="label label-success">v [m/s]</span></h5>
+    <h5><span class="glyphicon glyphicon-time"></span> Stranicu održava i ažurira prof. dr Ilija M. MILIČIĆ, 2021.</h5>   
+      
+    <p>Analizirani i ažurirani podaci su 08.10.2021. godine, sa meteorološke stanice na lokaciji Kozaračka 2a, Subotica, Republika Srbija, | 46.111647 °N, 19.650137 °E |.</p>
+    <br>
+
+	  <h4><small>1. TEMPERATURA</small></h4>
+    <hr>
+	  <h5><span class="label label-danger"> T[°C] </span></h5>
+      <iframe width="100%" height="485" src="podaci\01_temperatura_IMM.html" frameborder="0" allowfullscreen></iframe>
+
+
+    <!-- 2nd row -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card card-block">
+            <h5><span class="label label-danger"> T [°C] </span></h5>
+            <h5 class="card-title m-b-2">Analiza vrednosti temperatura po mesecima:</h5>           
+                <iframe width="100%" height="390" src="podaci\02_temperatura_analiza_IMM.html" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-block">
+            <h5><span class="label label-danger"> T [°C] </span></h5>
+            <h5 class="card-title m-b-2">Analiza vrednosti tačke rose po mesecima:</h5>
+                <iframe width="100%" height="390" src="podaci\03_tacka_rose_analiza_IMM.html" frameborder="0" allowfullscreen></iframe>  
+          </div>
+        </div>
+      </div>
+      <!-- /2nd row -->
+
+	  <br>
+
+    <h4><small>2. VLAŽNOST</small></h4>
+    <hr>	  
+	  <h5><span class="label label-primary"> RH [%] </span></h5>
+    Relativna vlažnost vazduha:
+      <iframe width="100%" height="485" src="podaci\04_vlaznost_vazduha_IMM.html" frameborder="0" allowfullscreen></iframe>
+
+
+   <!-- 2nd row -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card card-block">
+            <h5><span class="label label-primary"> RH [%] </span></h5>
+            <h5 class="card-title m-b-2">Analiza vrednosti relativne vlažnosti vazduha po mesecima:</h5>             
+<iframe width="100%" height="395" src="podaci\05_vlaznost_vazduha_analiza_IMM.html" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-block">
+            <h5><span class="label label-primary"></span></h5>
+            <h5 class="card-title m-b-2"></h5>
+ 
+          </div>
+        </div>
+      </div>
+      <!-- /2nd row --> 
+
+
+	  <h4><small>3. VETAR</small></h4>
+    <hr>
+	  <h5><span class="label label-success"> v [m/s] </span></h5>
+    Brzina dejstva vetra:
+      <iframe width="100%" height="485" src="podaci\06_brzina_vetra_IMM.html" frameborder="0" allowfullscreen></iframe>	  
+	  
+    <!-- 2nd row -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card card-block">
+            <h5><span class="label label-success"> v [m/s] </span></h5>
+            <h5 class="card-title m-b-2">Analiza vrednosti brzine vetra po mesecima:</h5>             
+<iframe width="100%" height="390" src="podaci\07_brzina_vetra_analiza_IMM.html" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card card-block">
+            <h5><span class="label label-success"> v [m/s] </span></h5>
+            <h5 class="card-title m-b-2">Ruža dejstva vetra za 2021. godinu:</h5>
+<iframe width="100%" height="390" src="podaci\08_ruza_vetra_IMM.html" frameborder="0" allowfullscreen></iframe>  
+          </div>
+        </div>
+      </div>
+      <!-- /2nd row -->
+
+<!--
+	  <h5><span class="label label-success">[stepeni]</span></h5>
+    Smer dejstva vetra:
+	   <iframe width="100%" height="380" src="podaci\09_smer_vetra_IMM.html" frameborder="0" allowfullscreen></iframe>
+-->
+	  
+	  <br>
+  
+      <h4><small>NEDAVNE OBAVEZE</small></h4>
+      <hr>
+      <h2>Komentar</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by IMM, Jan 01, 2021.</h5>
+      <h5><span class="label label-success">++++</span></h5><br>
+      <p>Sve primedbe, sugestije, komentari su dobro došli.</p>
+      <hr>
+
+      <h4>Vaš komentar:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Podnesi</button>
+      </form>
+      <br><br>
+           
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>Design by: IMM 2021</p>
+</footer>
+</body>
+</html>

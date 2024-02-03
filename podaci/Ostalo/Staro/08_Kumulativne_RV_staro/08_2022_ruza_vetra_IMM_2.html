@@ -1,0 +1,162 @@
+<!doctype html>
+<html class="imm-html">
+
+<head>
+  <meta charset="utf-8">
+  <title>UNS-GFS_ruža vetra_IMM</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .chart--container {
+      min-height: 400px;
+      width: 100%;
+      height: 100%;
+    }
+    .zc-ref {
+      display: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="myChart" class="chart--container">
+<!--PAŽNJA, Pažnja, pažnja.................................Ilija M. MILIČIĆ, je ovo ubacio 2021.godine-->
+    <a class="zc-ref" href="http://www.gf.uns.ac.rs/~milicic/index.html"><img src="/slike/kisobran.gif" width="1" height="1"></a>
+      <div id="myChart-license-text" style="white-space: nowrap; top: 0px; left: 1px; width: 10px; height: 10px; position: absolute; font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, &quot;Lucida Sans&quot;, Helvetica, Arial, sans-serif; cursor: pointer; padding: 0px; opacity: 1;"><a title="Prof. dr Ilija M. MILIČIĆ" style="text-decoration: none; color: rgb(0, 0, 0) !important; font-size: 10px important; display: block !important; opacity: 1 !important; font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, &quot;Lucida Sans&quot;, Helvetica, Arial, sans-serif;" href=" "> <span style="color:#00384A; font-weight: normal; font-family: Arial; font-size: 11px">&copy; Refresh <span style="color:#00384A; font-weight:bold;">.</span></a></div>
+    <!--Pisalo je Powered by ZingChart, a pošto sam (Ilija M. MILIČIĆ) izmenio dosta toga i prilagodio ovo rešenje (HTML) svojim istraživanjima, normalno je bilo priključiti se ovoj ideji, i dati svoj doprinos. HVALA na razumevanju-->
+  </div>
+   
+  <script>
+    //ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    let chartConfig = {
+    globals: { fontFamily: 'Arial', shadow: false },
+      type: 'radar',
+      theme: 'classic',
+      backgroundColor: '#ffffff',
+      //title: {
+        //text: '02.2021.', color: '#000000', 
+        //backgroundColor: 'white',
+        //fontSize: '14px'
+      //},
+      plot: {
+        //animation: {
+          //effect: 'ANIMATION_EXPAND_BOTTOM',
+          //effect: 'ANIMATION_EXPAND_TOP',
+          //sequence: 'ANIMATION_BY_PLOT_AND_NODE',
+          //speed: 120,
+          //delay: 120,
+          //},
+//------------ kumulativna ruža vetra --------------------------------------------------
+        stacked: true,  //false, true,
+        //angleSpace: 22,
+        angle: 0,
+//------------ kumulativna ruža vetra --------------------------------------------------
+        aspect: 'rose',
+      },
+<!----------------------------------------- legenda ---------------------------------------------------->
+      legend: {
+        align: 'right', //'left', 'right'
+        backgroundColor: 'none',
+        borderWidth: '1px',
+        item: {
+          cursor: 'hand',
+          fontColor: '#000000'
+        },
+        marker: {
+          type: 'circle',
+          borderWidth: '1px',
+          cursor: 'hand'
+        },
+        verticalAlign: 'top'
+      },
+<!----------------------------------------------------------- tip -------------------------------------->
+"scale-k": {
+  aspect: 'circle',
+        "labels": ["360=N=0", "NNE", "NE", "ENE", "E=90", "ESE", "SE", "SSE", "S=180", "SSW", "SW", "WSW", "W=270", "WNW", "NW", "NNW"],
+        "item": {
+          "font-color": "#000000",
+          "font-family": "Arial",
+          "font-size": 12,
+          "font-weight": "bold",
+          "font-style": "normal"
+        },
+        "tick": {
+          "line-color": "#c10000",
+          "line-width": 3,
+          "size": 15,
+          "placement": "outer"
+        },
+        "guide": {
+          "line-color": "#c10000",
+          "line-width": 1,
+          "line-style": "solid",
+          "background-color": "#f0f0f5 #ffffff"
+        }
+      },
+      "scale-v": {
+        "visible": false
+      },   
+<!----------------------------------------------------------------------------------------------------->
+      scaleV: {
+        aspect: 'circle',
+        //values: '0:100:4',
+        guide: {
+          lineColor: '#333',
+          lineStyle: 'solid',
+          lineWidth: '1px'
+        },
+        item: {
+          color: '#333'
+        },
+        lineColor: '#FFF'
+      },
+      tooltip: {
+        text: '%v (m/s) u pravcu %data-band°)',
+        backgroundColor: '#ffcc00',
+        color: '#333',
+        fontSize: '14px'
+      },
+<!------------------------------------------------------------------------------------------------------>     
+       "series": [    
+//------------------------------------------------- 2022 ------------------------------------------------
+{text: 'Jan',"values": [9.9, 8.9, 0, 3.1, 3.6, 4, 5.3, 5.3, 7.6, 8.6, 6.6, 8.6, 7.7, 13.6, 10.9, 12.7],   //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']}, 
+{text: 'Feb',"values": [12, 10.6, 3.9, 2.1, 3.8, 7.2, 9.1, 9.3, 7.8, 9.6, 10, 10.6, 11, 9.6, 10.8, 12.5],   //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+{text: 'Mar',"values": [10.2,10.1,6.6,6.5,6.5,7,8.9,10.9,5.8,6.6,8.8,8.7,8.7,7.7,8.1,8.6], 
+    //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+{text: 'Apr',"values": [12.5,10.1,3.6,4,7.8,9.2,6.6,10.1,6.7,9.4,14.6,9.7,9.5,8.2,12,10.5], 
+    //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+{text: 'Maj',"values": [10.9,9.2,5.2,4.4,5.5,8.6,8.5,6.4,6.1,7,6.6,6.2,8.3,8.6,7,9.4],   //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+{text: 'Jun',"values": [8.1,3.9,3.0,3.2,5.0,10.4,9.3,8.0,8.6,6,6.3,5.1,6.2,5.2,5.3,8.4],   //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+{text: 'Jul',"values": [9.7,5.6,4.5,3.5,6.4,7.1,5.6,5.3,5.3,5.8,5.9,5.6,8.3,8.9,10.3,9.9],   //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+{text: 'Avg',"values": [8.8,7.6,4.1,5.0,5.4,5.7,5.6,4.3,4.2,15.2,9.1,5.9,6.6,7.8,9.8,9.0],   //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+{text: 'Sep',"values": [10,4.3,2.7,5.1,5.3,5.5,5.9,5.9,8.3,11.7,10.2,10.5,9.9,8,7.4,8.2],   //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+{text: 'Okt',"values": [6.5,4.9,0,3.4,3.8,5.6,7.8,8,4.4,5.3,7.7,6.5,5.5,6.6,9.4,10.8],   //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+{text: 'Nov',"values": [7.2,6.1,0,3,8.4,9.7,6.2,6.5,4,5.2,5.6,6.5,7.2,10,7.3,6.6],   //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+{text: 'Dec',"values": [10.8,4.2,0,0,7.2,9,10.1,8.1,6.5,7.6,5.6,5.9,4.4,7.3,7.5,11.2],   //backgroundColor: '#660099',
+dataBand: ['N (360', 'NNE (23', 'NE (45', 'ENE (73', 'E (90', 'ESE (113', 'SE (135', 'SSE (158', 'S (180', 'SSW (203', 'SW (225', 'WSW (248', 'W (270', 'WNW (293', 'NW (315', 'NNW (330']},
+//-------------------------------------------------------------------------------------------------------
+                ]};
+
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig,
+      height: '100%',
+      width: '100%',
+    });
+  </script>
+</body>
+<script src="https://cdn.zinggrid.com/zinggrid.min.js"></script>
+
+</html>
